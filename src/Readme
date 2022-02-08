@@ -1,0 +1,23 @@
+Germán,
+Junto con saludar, te comento que en virtud del orden y la lógica que encontré al realizar la prueba
+realicé las modificaciones correspondientes para poder lograr con el objetivo del funcionamiento del programa
+según lo requerido. Dentro de los cambios realizados, te los comento a continuación:
+1.-Se genera la clase MenuTemplate con los métodos solicitados para la clase menú, con la finalidad de poder sobreescribirlos en 
+la clase mencionada.
+2.-Se hace mención al atributo exportarTxt instancia de ExportarTxt, el cual posteriormente no vuelve aparecer. Incluso se solicita crear clase
+ExportadorTxt y ExportadorCsv que heredan de Exportador (Abstracta), los cuales tienen por parametro String fileName y list<Cliente>listaClientes.
+De esta forma no considere el atributo exportar ni clase Exportar.
+3.-En la clase ClienteServicio se menciona generar un método public void de agregarCliente la que recibe por parámetros, aquellos correspondientes a la clase cliente.
+En este caso para los efectos de realización de los test Junit, se modificó el public void por un public list<Cliente>agregarCliente.
+Este cambio no afectó el funcionamiento del programa.
+4.- En la clase archivoServicio, se solicita extender de la clase Exportador y con ello se hereda el metodo exportar que recibe por parametro
+String fileName y List<Cliente>listaCliente. Asimismo se pide crear metodo cargarDatos recibiendo como parametro solo String FileName.
+No encontré mucho sentido que el método cargarDatos(Importar) heredará de exportar. De esta forma generé una clase abstracta Importar que hereda a la clase ArchivoServicio.
+Aquí se pasa por parámetros String fileName1, el que corresponde al String fileName1 declarado en menu. Se  agrega también como parámetro la listaClientes,
+siguiendo el sentido que tenia los parametros que recibia el metodo exportar y poder obtener así la lista con los datos.
+
+Eso serían los cambios generados, espero no tener resta de puntos :/ al respecto, lo hice pensando en la lógica que encontre.
+
+Te dejo el link de mi GitHub.
+
+https://github.com/darverag/Java_G6
